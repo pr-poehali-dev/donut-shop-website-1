@@ -122,7 +122,7 @@ export default function Index() {
               className="w-10 h-10 object-cover rounded-full"
             />
             <span className="text-2xl" style={{ fontFamily: "'Pacifico', cursive", color: "var(--pink-dark)" }}>
-              Пончик
+              Лучший пончик
             </span>
           </button>
 
@@ -200,11 +200,20 @@ export default function Index() {
             <span style={{ color: "var(--pink-dark)" }}>влюбляет</span>
           </h1>
 
-          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed"
             style={{ color: "var(--brown-light)", fontFamily: "'Golos Text', sans-serif" }}>
             Воздушные пончики ручной работы с натуральными ингредиентами.
             Каждый — маленький шедевр, созданный с любовью.
           </p>
+
+          <div className="flex justify-center mb-8">
+            <img
+              src="https://cdn.poehali.dev/projects/6e916fd9-ef54-4b6d-8919-7d991408e945/bucket/f584c8f3-0140-414f-8ff2-193982916673.JPG"
+              alt="Лучший пончик"
+              className="w-44 h-44 md:w-56 md:h-56 object-cover rounded-full animate-float"
+              style={{ boxShadow: "0 16px 48px rgba(249,168,201,0.45)", border: "4px solid white" }}
+            />
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => scrollTo("menu")} className="btn-primary text-lg"
@@ -647,7 +656,7 @@ export default function Index() {
                 className="w-10 h-10 object-cover rounded-full"
               />
               <span className="text-2xl" style={{ fontFamily: "'Pacifico', cursive", color: "var(--pink)" }}>
-                Пончик
+                Лучший пончик
               </span>
             </div>
 
