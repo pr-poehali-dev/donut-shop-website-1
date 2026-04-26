@@ -116,7 +116,11 @@ export default function Index() {
         style={{ backgroundColor: "rgba(255,248,240,0.95)", backdropFilter: "blur(12px)", borderColor: "var(--pink-light)" }}>
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
-            <span className="text-3xl">🍩</span>
+            <img
+              src="https://cdn.poehali.dev/projects/6e916fd9-ef54-4b6d-8919-7d991408e945/bucket/f584c8f3-0140-414f-8ff2-193982916673.JPG"
+              alt="Пончик"
+              className="w-10 h-10 object-cover rounded-full"
+            />
             <span className="text-2xl" style={{ fontFamily: "'Pacifico', cursive", color: "var(--pink-dark)" }}>
               Пончик
             </span>
@@ -637,7 +641,11 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <span className="text-3xl">🍩</span>
+              <img
+                src="https://cdn.poehali.dev/projects/6e916fd9-ef54-4b6d-8919-7d991408e945/bucket/f584c8f3-0140-414f-8ff2-193982916673.JPG"
+                alt="Пончик"
+                className="w-10 h-10 object-cover rounded-full"
+              />
               <span className="text-2xl" style={{ fontFamily: "'Pacifico', cursive", color: "var(--pink)" }}>
                 Пончик
               </span>
