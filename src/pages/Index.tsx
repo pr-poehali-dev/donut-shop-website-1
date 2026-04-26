@@ -195,32 +195,33 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-8">
-            {/* Text block */}
-            <div className="text-center md:text-left flex-1">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight"
-                style={{ fontFamily: "'Pacifico', cursive", color: "var(--brown)" }}>
-                Вкус, который
-                <br />
-                <span style={{ color: "var(--pink-dark)" }}>влюбляет</span>
-              </h1>
-
-              <p className="text-lg md:text-xl leading-relaxed"
-                style={{ color: "var(--brown-light)", fontFamily: "'Golos Text', sans-serif" }}>
-                Воздушные пончики ручной работы с натуральными ингредиентами.
-                Каждый — маленький шедевр, созданный с любовью.
-              </p>
-            </div>
-
-            {/* Logo image */}
-            <div className="flex-shrink-0">
-              <img
-                src="https://cdn.poehali.dev/projects/6e916fd9-ef54-4b6d-8919-7d991408e945/bucket/f584c8f3-0140-414f-8ff2-193982916673.JPG"
-                alt="Лучший пончик"
-                className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full animate-float"
-                style={{ boxShadow: "0 16px 48px rgba(249,168,201,0.45)", border: "4px solid white" }}
-              />
-            </div>
+          {/* Text with float image */}
+          <div className="mb-8 text-center">
+            <img
+              src="https://cdn.poehali.dev/projects/6e916fd9-ef54-4b6d-8919-7d991408e945/bucket/f584c8f3-0140-414f-8ff2-193982916673.JPG"
+              alt="Лучший пончик"
+              className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full animate-float"
+              style={{
+                float: "right",
+                marginLeft: "2rem",
+                marginBottom: "1rem",
+                boxShadow: "0 16px 48px rgba(249,168,201,0.45)",
+                border: "4px solid white",
+                shapeOutside: "circle(50%)",
+              }}
+            />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight text-left"
+              style={{ fontFamily: "'Pacifico', cursive", color: "var(--brown)" }}>
+              Вкус, который
+              <br />
+              <span style={{ color: "var(--pink-dark)" }}>влюбляет</span>
+            </h1>
+            <p className="text-lg md:text-xl leading-relaxed text-left"
+              style={{ color: "var(--brown-light)", fontFamily: "'Golos Text', sans-serif" }}>
+              Воздушные пончики ручной работы с натуральными ингредиентами.
+              Каждый — маленький шедевр, созданный с любовью.
+            </p>
+            <div style={{ clear: "both" }} />
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -247,7 +248,7 @@ export default function Index() {
           </div>
 
           {/* Builder CTA */}
-          <div className="mt-5">
+          <div className="mt-5 text-center">
             <button
               onClick={() => setBuilderOpen(true)}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105"
