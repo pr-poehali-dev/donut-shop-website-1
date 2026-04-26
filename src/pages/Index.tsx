@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import DonutBuilder from "@/components/DonutBuilder";
 
 const DONUTS = [
   {
@@ -93,6 +94,7 @@ export default function Index() {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [builderOpen, setBuilderOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -106,6 +108,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--cream)", fontFamily: "'Golos Text', sans-serif" }}>
+      {builderOpen && <DonutBuilder onClose={() => setBuilderOpen(false)} />}
 
       {/* NAVBAR */}
       <nav
@@ -222,6 +225,25 @@ export default function Index() {
             </button>
           </div>
 
+          {/* Builder CTA */}
+          <div className="mt-5">
+            <button
+              onClick={() => setBuilderOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105"
+              style={{
+                backgroundColor: "white",
+                color: "var(--brown)",
+                boxShadow: "0 4px 20px rgba(249,168,201,0.35)",
+                fontFamily: "'Golos Text', sans-serif",
+                border: "2px solid var(--pink)",
+              }}
+            >
+              <span className="text-xl">🎨</span>
+              Собрать свой пончик
+              <Icon name="ChevronRight" size={16} />
+            </button>
+          </div>
+
           <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
             {[
               ["50+", "видов пончиков"],
@@ -257,9 +279,21 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Pacifico', cursive", color: "var(--brown)" }}>
               Выбери свой пончик
             </h2>
-            <p className="text-lg max-w-xl mx-auto" style={{ color: "var(--brown-light)" }}>
+            <p className="text-lg max-w-xl mx-auto mb-6" style={{ color: "var(--brown-light)" }}>
               Каждый пончик — уникальное сочетание вкусов, создано вручную каждое утро
             </p>
+            <button
+              onClick={() => setBuilderOpen(true)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-all hover:scale-105"
+              style={{
+                backgroundColor: "var(--pink-dark)",
+                color: "white",
+                fontFamily: "'Golos Text', sans-serif",
+                boxShadow: "0 4px 16px rgba(232,97,140,0.3)",
+              }}
+            >
+              <span>🎨</span> Собери свой пончик
+            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
